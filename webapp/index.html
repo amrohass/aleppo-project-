@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aleppo Cafe | حلب كافيه — Ramallah, Palestine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Amiri:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #100600;
+    --bg-dark: #1A0B03;
+    --bg-warm: #251208;
+    --bg-card: #2E1609;
+    --red: #8C1C13;
+    --red-light: #B02318;
+    --red-glow: #C0392B;
+    --gold: #C5922A;
+    --gold-light: #E8B84B;
+    --cream: #F2E4C4;
+    --cream-dim: #C9B48A;
+    --cream-muted: #8C7550;
+    --text: #F0DEB8;
+    --text-dim: #C4A97A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── GEOMETRIC PATTERN SVG ─── */
+  .geo-pattern {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23C5922A' stroke-width='0.5'%3E%3Crect x='10' y='10' width='60' height='60'/%3E%3Cpolygon points='40,2 78,40 40,78 2,40'/%3E%3Cpolygon points='40,14 66,40 40,66 14,40'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Cline x1='40' y1='2' x2='40' y2='78'/%3E%3Cline x1='2' y1='40' x2='78' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: linear-gradient(to bottom, rgba(16,6,0,0.95) 0%, rgba(16,6,0,0) 100%);
+    transition: background 0.4s;
+  }
+  nav.scrolled { background: rgba(16,6,0,0.97); border-bottom: 0.5px solid rgba(197,146,42,0.2); }
+
+  .nav-logo {
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    color: var(--gold-light);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+  .nav-logo span { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.3em; display: block; color: var(--cream-dim); text-transform: uppercase; margin-top: -0.2rem; }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Lato', sans-serif; font-weight: 300;
+    font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--cream-dim); text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 0.5px; background: var(--gold);
+    transform: scaleX(0); transition: transform 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  .nav-reserve {
+    font-family: 'Lato', sans-serif; font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 0.6rem 1.5rem;
+    border: 0.5px solid var(--gold);
+    color: var(--gold); text-decoration: none;
+    transition: all 0.3s;
+  }
+  .nav-reserve:hover { background: var(--gold); color: var(--bg-deep); }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative; height: 100vh; min-height: 700px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, #3B1A06 0%, #1A0B03 45%, #100600 100%);
+  }
+
+  .hero-geo { opacity: 0.06; }
+
+  .hero-ornament {
+    position: absolute; width: 600px; height: 600px;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 0.5px solid rgba(197,146,42,0.15);
+    animation: rotate-slow 60s linear infinite;
+  }
+  .hero-ornament::before, .hero-ornament::after {
+    content: ''; position: absolute; border-radius: 50%;
+    border: 0.5px solid rgba(197,146,42,0.1);
+  }
+  .hero-ornament::before { inset: 30px; animation: rotate-slow 40s linear infinite reverse; }
+  .hero-ornament::after { inset: 60px; }
+
+  @keyframes rotate-slow { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center; padding: 0 2rem;
+    animation: fade-up 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.5em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    animation: fade-up 1.4s 0.2s both;
+  }
+
+  .hero-arabic {
+    font-family: 'Amiri', serif; font-size: clamp(4rem, 10vw, 8rem);
+    color: var(--cream); line-height: 1;
+    text-shadow: 0 0 80px rgba(197,146,42,0.15);
+    animation: fade-up 1.4s 0.3s both;
+  }
+
+  .hero-english {
+    font-family: 'Cinzel', serif; font-size: clamp(0.8rem, 2vw, 1.1rem);
+    letter-spacing: 0.6em; text-transform: uppercase;
+    color: var(--gold-light); margin-top: 0.5rem;
+    animation: fade-up 1.4s 0.4s both;
+  }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    color: var(--cream-dim); margin-top: 2rem; letter-spacing: 0.05em;
+    animation: fade-up 1.4s 0.5s both;
+  }
+
+  .hero-divider {
+    width: 60px; height: 0.5px; background: var(--gold);
+    margin: 2rem auto; animation: fade-up 1.4s 0.6s both;
+  }
+
+  .hero-cta {
+    display: inline-flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;
+    animation: fade-up 1.4s 0.7s both;
+  }
+  .btn-primary {
+    font-family: 'Lato', sans-serif; font-size: 0.7rem;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    padding: 1rem 2.5rem; background: var(--red);
+    color: var(--cream); text-decoration: none;
+    border: none; cursor: pointer; transition: all 0.3s;
+  }
+  .btn-primary:hover { background: var(--red-light); transform: translateY(-2px); }
+  .btn-ghost {
+    font-family: 'Lato', sans-serif; font-size: 0.7rem;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    padding: 1rem 2.5rem; background: transparent;
+    border: 0.5px solid rgba(197,146,42,0.5);
+    color: var(--gold); text-decoration: none; transition: all 0.3s;
+  }
+  .btn-ghost:hover { border-color: var(--gold-light); color: var(--gold-light); transform: translateY(-2px); }
+
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: var(--cream-muted); font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+    animation: fade-up 1.4s 1s both;
+  }
+  .scroll-line {
+    width: 0.5px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+  @keyframes scroll-pulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+  /* ─── SECTION BASE ─── */
+  section { position: relative; overflow: hidden; }
+
+  .section-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.5em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); color: var(--cream);
+    line-height: 1.2;
+  }
+
+  .section-title-ar {
+    font-family: 'Amiri', serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: var(--cream); line-height: 1.3;
+  }
+
+  .gold-rule {
+    width: 50px; height: 0.5px; background: var(--gold); margin: 1.5rem 0;
+  }
+
+  .body-text {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+    line-height: 1.85; color: var(--cream-dim); font-weight: 300;
+  }
+
+  /* ─── STORY SECTION ─── */
+  .story {
+    padding: 8rem 4rem;
+    background: var(--bg-dark);
+  }
+  .story-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+  }
+  .story-left { position: relative; }
+  .story-img-frame {
+    position: relative; padding: 1.5rem;
+  }
+  .story-img-frame::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 1.5rem; bottom: 1.5rem;
+    border: 0.5px solid rgba(197,146,42,0.3);
+  }
+  .story-img-frame::after {
+    content: ''; position: absolute;
+    top: 1.5rem; left: 1.5rem; right: 0; bottom: 0;
+    border: 0.5px solid rgba(197,146,42,0.15);
+  }
+  .story-img {
+    width: 100%; aspect-ratio: 3/4; object-fit: cover;
+    position: relative; z-index: 1;
+    filter: sepia(20%) brightness(0.85);
+  }
+  .story-badge {
+    position: absolute; bottom: 3rem; right: -2rem; z-index: 2;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: var(--red); color: var(--cream);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Cinzel', serif; text-align: center;
+    border: 0.5px solid rgba(197,146,42,0.4);
+  }
+  .story-badge span { font-size: 1.6rem; font-weight: 600; line-height: 1; }
+  .story-badge small { font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.2rem; color: var(--gold-light); }
+
+  .story-quote {
+    font-family: 'Amiri', serif; font-size: 2.2rem;
+    color: var(--gold-light); line-height: 1.4;
+    direction: rtl; margin-bottom: 1rem;
+  }
+  .story-quote-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.1rem; color: var(--cream-muted); margin-bottom: 2rem;
+  }
+
+  .stat-row { display: flex; gap: 3rem; margin-top: 2.5rem; }
+  .stat { }
+  .stat-num {
+    font-family: 'Cinzel', serif; font-size: 2rem;
+    color: var(--gold-light); line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--cream-muted); margin-top: 0.3rem;
+  }
+
+  /* ─── ATMOSPHERE ─── */
+  .atmosphere {
+    padding: 6rem 4rem;
+    background: var(--bg-warm);
+  }
+  .atm-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+  .atm-header .gold-rule { margin: 1.5rem auto; }
+
+  .atm-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+  .atm-item {
+    position: relative; overflow: hidden; cursor: pointer;
+  }
+  .atm-item:nth-child(1) { grid-row: 1 / 3; }
+  .atm-item:nth-child(2) { }
+  .atm-item:nth-child(3) { }
+  .atm-item:nth-child(4) { }
+  .atm-item:nth-child(5) { }
+
+  .atm-img {
+    width: 100%; height: 100%; min-height: 200px;
+    object-fit: cover;
+    filter: sepia(30%) brightness(0.75) saturate(0.8);
+    transition: transform 0.8s ease, filter 0.6s ease;
+  }
+  .atm-item:nth-child(1) .atm-img { min-height: 500px; }
+
+  .atm-item:hover .atm-img {
+    transform: scale(1.05);
+    filter: sepia(10%) brightness(0.9) saturate(1);
+  }
+
+  .atm-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(16,6,0,0.7) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* ─── MENU SECTION ─── */
+  .menu-section {
+    padding: 8rem 4rem;
+    background: var(--bg-deep);
+  }
+  .menu-inner { max-width: 1200px; margin: 0 auto; }
+  .menu-header { text-align: center; margin-bottom: 5rem; }
+  .menu-header .gold-rule { margin: 1.5rem auto; }
+
+  .menu-tabs {
+    display: flex; justify-content: center; gap: 0; margin-bottom: 3rem;
+    border-bottom: 0.5px solid rgba(197,146,42,0.2);
+    flex-wrap: wrap;
+  }
+  .menu-tab {
+    font-family: 'Lato', sans-serif; font-size: 0.65rem;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    padding: 0.8rem 2rem; cursor: pointer;
+    color: var(--cream-muted); background: none; border: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s; position: relative; bottom: -0.5px;
+  }
+  .menu-tab.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+  .menu-tab:hover { color: var(--cream-dim); }
+
+  .menu-panel { display: none; }
+  .menu-panel.active { display: block; }
+
+  .menu-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px; background: rgba(197,146,42,0.08);
+  }
+
+  .menu-item {
+    background: var(--bg-card);
+    padding: 1.75rem 2rem;
+    position: relative; overflow: hidden;
+    transition: background 0.3s;
+  }
+  .menu-item::before {
+    content: ''; position: absolute; left: 0; top: 1.75rem; bottom: 1.75rem;
+    width: 2px; background: var(--red);
+    transform: scaleY(0); transition: transform 0.3s;
+    transform-origin: bottom;
+  }
+  .menu-item:hover { background: rgba(46,22,9,0.9); }
+  .menu-item:hover::before { transform: scaleY(1); }
+
+  .menu-item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem; }
+  .menu-item-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--cream); font-weight: 400; }
+  .menu-item-name-ar { font-family: 'Amiri', serif; font-size: 1rem; color: var(--cream-dim); direction: rtl; }
+  .menu-item-price {
+    font-family: 'Cinzel', serif; font-size: 0.85rem;
+    color: var(--gold); white-space: nowrap;
+  }
+  .menu-item-desc { font-size: 0.8rem; color: var(--cream-muted); line-height: 1.5; margin-top: 0.4rem; }
+
+  /* ─── HOOKAH SECTION ─── */
+  .hookah-section {
+    padding: 6rem 4rem;
+    background: var(--bg-warm);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hookah-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .hookah-visual {
+    position: relative; text-align: center;
+  }
+  .hookah-svg {
+    width: 200px; opacity: 0.9;
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+  .hookah-ring {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px; height: 300px; border-radius: 50%;
+    border: 0.5px solid rgba(197,146,42,0.15);
+  }
+  .hookah-ring::before {
+    content: ''; position: absolute; inset: 20px; border-radius: 50%;
+    border: 0.5px solid rgba(197,146,42,0.08);
+  }
+
+  .hookah-flavors { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .flavor-chip {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: rgba(16,6,0,0.5); border: 0.5px solid rgba(197,146,42,0.15);
+    transition: border-color 0.3s;
+    cursor: default;
+  }
+  .flavor-chip:hover { border-color: rgba(197,146,42,0.4); }
+  .flavor-name { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--cream); }
+  .flavor-price { font-family: 'Cinzel', serif; font-size: 0.7rem; color: var(--gold); }
+
+  /* ─── EXPERIENCE ─── */
+  .experience {
+    padding: 8rem 4rem;
+    background: var(--bg-deep);
+  }
+  .exp-inner { max-width: 1200px; margin: 0 auto; }
+  .exp-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem;
+    margin-top: 4rem;
+  }
+  .exp-card { text-align: center; padding: 3rem 2rem; position: relative; }
+  .exp-card::before {
+    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 30px; height: 1px; background: var(--gold);
+  }
+  .exp-icon {
+    font-size: 2rem; margin-bottom: 1.5rem; display: block;
+  }
+  .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--cream); margin-bottom: 0.75rem; }
+  .exp-text { font-size: 0.85rem; color: var(--cream-muted); line-height: 1.8; }
+
+  /* ─── LOCATIONS ─── */
+  .locations {
+    padding: 8rem 4rem;
+    background: var(--bg-dark);
+  }
+  .loc-inner { max-width: 1200px; margin: 0 auto; }
+  .loc-header { text-align: center; margin-bottom: 5rem; }
+  .loc-header .gold-rule { margin: 1.5rem auto; }
+
+  .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+
+  .loc-card {
+    background: var(--bg-card);
+    padding: 4rem 3.5rem;
+    position: relative; overflow: hidden;
+  }
+  .loc-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(to right, var(--red), var(--gold));
+  }
+  .loc-num {
+    font-family: 'Cinzel', serif; font-size: 4rem;
+    color: rgba(197,146,42,0.08); line-height: 1;
+    margin-bottom: -1rem; font-weight: 600;
+  }
+  .loc-name-ar {
+    font-family: 'Amiri', serif; font-size: 1.6rem;
+    color: var(--gold-light); margin-bottom: 0.5rem; direction: rtl;
+    text-align: right;
+  }
+  .loc-name-en {
+    font-family: 'Cinzel', serif; font-size: 0.75rem;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--cream-muted); margin-bottom: 2rem;
+  }
+  .loc-detail {
+    display: flex; flex-direction: column; gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  .loc-row {
+    display: flex; align-items: flex-start; gap: 1rem;
+    font-size: 0.85rem;
+  }
+  .loc-row-label {
+    min-width: 70px; font-size: 0.6rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); padding-top: 0.2rem;
+  }
+  .loc-row-val { color: var(--cream-dim); line-height: 1.5; }
+
+  .loc-map-btn {
+    display: inline-block; margin-top: 2rem;
+    font-family: 'Lato', sans-serif; font-size: 0.65rem;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    border: 0.5px solid rgba(197,146,42,0.3);
+    color: var(--gold); text-decoration: none; transition: all 0.3s;
+  }
+  .loc-map-btn:hover { background: rgba(197,146,42,0.1); border-color: var(--gold); }
+
+  /* ─── GAMES STRIP ─── */
+  .games-strip {
+    padding: 4rem;
+    background: var(--red);
+    text-align: center;
+  }
+  .games-strip-text {
+    font-family: 'Amiri', serif; font-size: 1.6rem;
+    color: var(--cream); margin-bottom: 0.5rem;
+  }
+  .games-strip-sub {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.4em; text-transform: uppercase;
+    color: rgba(242,228,196,0.7); margin-bottom: 1.5rem;
+  }
+  .games-list {
+    display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
+    list-style: none;
+  }
+  .games-list li {
+    font-family: 'Lato', sans-serif; font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(242,228,196,0.8); padding: 0.4rem 0;
+    border-bottom: 0.5px solid rgba(242,228,196,0.3);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 5rem 4rem 3rem;
+    background: var(--bg-deep);
+    border-top: 0.5px solid rgba(197,146,42,0.12);
+  }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  .footer-logo {
+    font-family: 'Amiri', serif; font-size: 2.5rem;
+    color: var(--gold-light); line-height: 1;
+  }
+  .footer-logo-en {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.4em; color: var(--cream-muted); text-transform: uppercase;
+    display: block; margin-top: 0.3rem;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.95rem; color: var(--cream-muted);
+    margin-top: 1rem; line-height: 1.6;
+  }
+  .footer-social { display: flex; gap: 1rem; margin-top: 1.5rem; }
+  .footer-social a {
+    width: 36px; height: 36px; border: 0.5px solid rgba(197,146,42,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: 0.75rem; text-decoration: none;
+    transition: all 0.3s;
+  }
+  .footer-social a:hover { background: rgba(197,146,42,0.1); border-color: var(--gold); }
+
+  .footer-col h4 {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col a {
+    font-size: 0.8rem; color: var(--cream-muted); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-col a:hover { color: var(--cream-dim); }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 3rem auto 0;
+    padding-top: 2rem; border-top: 0.5px solid rgba(197,146,42,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-bottom p { font-size: 0.7rem; color: var(--cream-muted); }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── DECORATIVE DIAMOND DIVIDER ─── */
+  .diamond-divider {
+    text-align: center; padding: 1rem 0;
+    color: var(--gold); font-size: 0.5rem; letter-spacing: 1rem;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 2rem; }
+    .nav-links { display: none; }
+    .story-inner, .hookah-inner, .exp-grid, .loc-grid, .footer-inner {
+      grid-template-columns: 1fr;
+    }
+    .atm-grid { grid-template-columns: 1fr 1fr; }
+    .atm-item:nth-child(1) { grid-column: 1 / -1; grid-row: auto; }
+    section, .story, .atmosphere, .menu-section, .experience, .locations { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hookah-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .story-badge { right: 0; }
+    .games-strip { padding: 3rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    حلب
+    <span>Aleppo Cafe</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#atmosphere">Atmosphere</a></li>
+    <li><a href="#locations">Locations</a></li>
+  </ul>
+  <a href="#locations" class="nav-reserve">Find Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="geo-pattern hero-geo"></div>
+  <div class="hero-ornament"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Est. 2009 · Ramallah, Palestine</p>
+    <h1 class="hero-arabic">حلب</h1>
+    <p class="hero-english">Aleppo Cafe</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">إنت فبيتك — You are home</p>
+    <div style="margin-top: 3rem;" class="hero-cta">
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="#story" class="btn-ghost">Our Story</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="geo-pattern" style="opacity:0.03;"></div>
+  <div class="story-inner">
+    <div class="story-left reveal">
+      <div class="story-img-frame">
+        <!-- Placeholder for actual cafe interior image -->
+        <div class="story-img" style="background-image: url('converted_image.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            min-height: 400px;
+            display: flex;">
+            
+        </div>
+        <div class="story-badge">
+          <span>15</span>
+          <small>Years of warmth</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-right reveal" style="transition-delay:0.2s;">
+      <p class="section-label">Our Story · قصتنا</p>
+      <h2 class="section-title">More than a cafe.<br><em>A second home.</em></h2>
+      <div class="gold-rule"></div>
+
+      <div class="story-quote">إنت فبيتك</div>
+      <p class="story-quote-en">"You are in your home"</p>
+
+      <p class="body-text">
+        Nestled inside a century-old building in Ramallah, Aleppo Cafe was born from a simple belief: that a cafe should feel like a warm gathering of family. Since 2009, our guests have not been customers — they are beloved friends who return again and again to our embrace.
+      </p>
+
+      <p class="body-text" style="margin-top:1.2rem;">
+        The stone walls remember. The amber light has witnessed laughter, conversations, board games stretching into the night, and mornings that started with Palestinian breakfast and two cups of tea. Our employees are not staff — they are the soul of this home.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Year old building</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">15</div>
+          <div class="stat-label">Years of love</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Ramallah locations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATMOSPHERE -->
+<section class="atmosphere" id="atmosphere">
+  <div class="atm-header reveal">
+    <p class="section-label">The Space · المكان</p>
+    <h2 class="section-title">Every corner tells a story</h2>
+    <div class="gold-rule"></div>
+    <p class="body-text">Vintage lamps, mosaic tables, hand-woven cushions, and the faint hum of Arabic music — welcome to Aleppo.</p>
+  </div>
+
+  <div class="atm-grid">
+    <div class="atm-item">
+      <!-- <div class="atm-img" style="  background-image: url('IMG_0708.jpg'); min-height:500px; display:flex; align-items:flex-end; padding:2rem;">-->
+        <div class="atm-img" style="background-image: url('converted_image_2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+        <div style="color:rgba(197,146,42,0.6); font-family:'Amiri',serif; font-size:2.5rem; line-height:1.2;">وبين عيلتك</div>
+      </div>
+      <div class="atm-overlay"></div>
+    </div>
+    <div class="atm-item">
+      <div class="atm-img" style="background-image: url('IMG_0707.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+        <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.4);">☕</div>
+      </div>
+      <div class="atm-overlay"></div>
+    </div>
+    <div class="atm-item">
+      <div class="atm-img" style="background-image: url('IMG_0705.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+        <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.35);">🕯</div>
+      </div>
+      <div class="atm-overlay"></div>
+    </div>
+    <div class="atm-item">
+      <div class="atm-img" style="background-image: url('IMG_0704.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+        <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.4);">🎲</div>
+      </div>
+      <div class="atm-overlay"></div>
+    </div>
+    <div class="atm-item">
+      <div class="atm-img" style="background-image: url('IMG_0708.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+        <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.4);">🫙</div>
+      </div>
+      <div class="atm-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <div class="geo-pattern" style="opacity:0.025;"></div>
+  <div class="menu-inner">
+    <div class="menu-header reveal">
+      <p class="section-label">The Menu · قائمة الطعام</p>
+      <h2 class="section-title">From our kitchen, with love</h2>
+      <div class="gold-rule"></div>
+      <p class="body-text" style="max-width:500px; margin:0 auto;">Prices in NIS. All sandwiches served with fries or salad. Main dishes served with rice.</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="menu-tab active" onclick="showTab('breakfast')">Breakfast · الفطور</button>
+      <button class="menu-tab" onclick="showTab('sandwiches')">Sandwiches · ساندويشات</button>
+      <button class="menu-tab" onclick="showTab('appetizers')">Appetizers · المقبلات</button>
+      <button class="menu-tab" onclick="showTab('mains')">Main Course · الأطباق</button>
+      <button class="menu-tab" onclick="showTab('salads')">Salads · سلطات</button>
+      <button class="menu-tab" onclick="showTab('tost')">Tost · توست</button>
+    </div>
+
+    <div id="breakfast" class="menu-panel active">
+      <div class="menu-grid">
+        <div class="menu-item" style="grid-column: 1 / -1; background: rgba(140,28,19,0.12); border-left: 2px solid var(--red);">
+          <div class="menu-item-header">
+            <div>
+              <div class="menu-item-name">Palestinian Breakfast</div>
+              <div class="menu-item-name-ar">فطور فلسطيني</div>
+            </div>
+            <div class="menu-item-price">40 ₪</div>
+          </div>
+          <div class="menu-item-desc">Thyme & oil, jam, butter, tomato pan, fried cheese, omelet, fool, hummus, labaneh, mixed veg dish — served with 2 cups of tea</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sandwiches" class="menu-panel">
+      <div class="menu-grid">
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Sandwich</div><div class="menu-item-name-ar">مسحب</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mexican Chicken</div><div class="menu-item-name-ar">مسحب مكسيكي</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">White Sauce Chicken</div><div class="menu-item-name-ar">مسحب وايت صوص</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Italian Chicken Sandwich</div><div class="menu-item-name-ar">مسحب إيطالي</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Zinger</div><div class="menu-item-name-ar">زنجر دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Classic Burger</div><div class="menu-item-name-ar">برجر كلاسيك</div></div><div class="menu-item-price">35 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mushroom Burger</div><div class="menu-item-name-ar">برجر مع مشروم</div></div><div class="menu-item-price">35 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Shawarma</div><div class="menu-item-name-ar">شاورما دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
+      </div>
+    </div>
+
+    <div id="tost" class="menu-panel">
+      <div class="menu-grid">
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mix tost</div><div class="menu-item-name-ar">توست مشكل</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Cheese tost</div><div class="menu-item-name-ar">توست جبنة صفراء</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Sausage tost</div><div class="menu-item-name-ar">توست نقانق</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">White Cheese tost</div><div class="menu-item-name-ar">توست جبنة بيضاء</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tuna tost</div><div class="menu-item-name-ar">توست تونا</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Roast beef tost</div><div class="menu-item-name-ar">توست روست بيف</div></div><div class="menu-item-price">35 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Smoked turkey tost</div><div class="menu-item-name-ar">توست حبش</div></div><div class="menu-item-price">35 ₪</div></div></div>
+      </div>
+    </div>
+
+    <div id="appetizers" class="menu-panel">
+      <div class="menu-grid">
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Garlic Bread</div><div class="menu-item-name-ar">خبز بالثوم</div></div><div class="menu-item-price">15 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Meat Rolls (8 pcs)</div><div class="menu-item-name-ar">أصابع لحمة · 8 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Fingers (6 pcs)</div><div class="menu-item-name-ar">أصابع دجاج · 6 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Potato Rolls (8 pcs)</div><div class="menu-item-name-ar">أصابع بطاطا · 8 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">French Fries</div><div class="menu-item-name-ar">بطاطا مقلية</div></div><div class="menu-item-price">12 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Nachos</div><div class="menu-item-name-ar">ناتشوز</div></div><div class="menu-item-price">25 ₪</div></div></div>
+      </div>
+    </div>
+
+    <div id="mains" class="menu-panel">
+      <div class="menu-grid">
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fajita</div><div class="menu-item-name-ar">فاهيتا</div></div><div class="menu-item-price">35 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Steak with Sautéed Vegetables</div><div class="menu-item-name-ar">ستيك دجاج مع خضار</div></div><div class="menu-item-price">35 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fettuccine</div><div class="menu-item-name-ar">فيتوتشيني / دجاج</div></div><div class="menu-item-price">30–35 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Stroganoff</div><div class="menu-item-name-ar">ستروجانوف</div></div><div class="menu-item-price">35 ₪</div></div></div>
+      </div>
+    </div>
+
+    <div id="salads" class="menu-panel">
+      <div class="menu-grid">
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Caesar Salad</div><div class="menu-item-name-ar">سيزر</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fattoush</div><div class="menu-item-name-ar">فتوش</div></div><div class="menu-item-price">17 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tabbouleh</div><div class="menu-item-name-ar">تبولة</div></div><div class="menu-item-price">17 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Salad</div><div class="menu-item-name-ar">سلطة دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Greek Salad</div><div class="menu-item-name-ar">سلطة يونانية</div></div><div class="menu-item-price">20 ₪</div></div></div>
+        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tuna Salad</div><div class="menu-item-name-ar">سلطة تونا</div></div><div class="menu-item-price">20 ₪</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOOKAH -->
+<section class="hookah-section">
+  <div class="geo-pattern" style="opacity:0.04;"></div>
+  <div class="hookah-inner">
+    <div class="hookah-visual reveal">
+      <div class="hookah-ring"></div>
+      <svg class="hookah-svg" viewBox="0 0 120 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- flame -->
+        <ellipse cx="60" cy="18" rx="6" ry="10" fill="rgba(197,146,42,0.6)"/>
+        <ellipse cx="60" cy="22" rx="3" ry="6" fill="rgba(197,146,42,0.9)"/>
+        <!-- top plate -->
+        <ellipse cx="60" cy="38" rx="24" ry="5" fill="#8C1C13"/>
+        <!-- neck -->
+        <rect x="54" y="38" width="12" height="40" fill="#6B1510"/>
+        <!-- body -->
+        <ellipse cx="60" cy="110" rx="30" ry="38" fill="#8C1C13"/>
+        <ellipse cx="60" cy="108" rx="24" ry="30" fill="#6B1510"/>
+        <!-- base -->
+        <ellipse cx="60" cy="150" rx="20" ry="6" fill="#8C1C13"/>
+        <rect x="52" y="150" width="16" height="12" fill="#6B1510"/>
+        <ellipse cx="60" cy="162" rx="28" ry="7" fill="#8C1C13"/>
+        <!-- hose -->
+        <path d="M 30 120 Q 0 130 10 160 Q 20 185 50 190" stroke="#C5922A" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <ellipse cx="50" cy="192" rx="6" ry="3" fill="#C5922A"/>
+        <!-- smoke lines -->
+        <path d="M 58 10 Q 52 4 58 0" stroke="rgba(197,146,42,0.4)" stroke-width="1" fill="none"/>
+        <path d="M 62 8 Q 68 2 62 -2" stroke="rgba(197,146,42,0.3)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="hookah-right reveal" style="transition-delay:0.2s;">
+      <p class="section-label">The Chimney Hookah · مدخنة أراجيل</p>
+      <h2 class="section-title">Settle in. <em>Stay a while.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="body-text" style="margin-bottom:2rem;">Our handcrafted hookah flavors are as warm as the conversations they accompany.</p>
+      <div class="hookah-flavors">
+        <div class="flavor-chip"><span class="flavor-name">Two Apples</span><span class="flavor-price">15 ₪</span></div>
+        <div class="flavor-chip"><span class="flavor-name">Lemon & Mint</span><span class="flavor-price">15 ₪</span></div>
+        <div class="flavor-chip"><span class="flavor-name">Watermelon & Mint</span><span class="flavor-price">15 ₪</span></div>
+        <div class="flavor-chip"><span class="flavor-name">Melon Mint</span><span class="flavor-price">15 ₪</span></div>
+        <div class="flavor-chip"><span class="flavor-name">Gum & Cinnamon</span><span class="flavor-price">15 ₪</span></div>
+        <div class="flavor-chip"><span class="flavor-name">Blueberry</span><span class="flavor-price">15 ₪</span></div>
+        <div class="flavor-chip"><span class="flavor-name">Adalya Love 66</span><span class="flavor-price">15 ₪</span></div>
+        <div class="flavor-chip"><span class="flavor-name">Nakhla Tobacco</span><span class="flavor-price">20 ₪</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAMES STRIP -->
+<div class="games-strip">
+  <p class="games-strip-text">يلا نلعب؟</p>
+  <p class="games-strip-sub">Let's Play · Board Games Available</p>
+  <ul class="games-list">
+    <li>Monopoly</li>
+    <li>Scrabble</li>
+    <li>Risk</li>
+    <li>Chess</li>
+    <li>Uno</li>
+    <li>& More</li>
+  </ul>
+</div>
+
+<!-- EXPERIENCE -->
+<section class="experience">
+  <div class="exp-inner">
+    <div class="reveal" style="text-align:center;">
+      <p class="section-label">Why Aleppo · لماذا حلب</p>
+      <h2 class="section-title">Three things that make us <em>different</em></h2>
+      <div class="gold-rule" style="margin: 1.5rem auto;"></div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <span class="exp-icon" style="font-family:'Amiri',serif; font-size:1.5rem; color:var(--gold);">١٠٠</span>
+        <h3 class="exp-title">A Century of Walls</h3>
+        <p class="exp-text">Our building has stood for over 100 years. The stone absorbs stories. You feel it the moment you walk in — a warmth that no new construction can replicate.</p>
+      </div>
+      <div class="exp-card reveal" style="transition-delay:0.15s;">
+        <span class="exp-icon" style="color:var(--gold); font-size:1.5rem;">♟</span>
+        <h3 class="exp-title">Games, Always</h3>
+        <p class="exp-text">Monopoly, chess, UNO, Scrabble — because the best conversations start around a board game. Time slows down here. That is the point.</p>
+      </div>
+      <div class="exp-card reveal" style="transition-delay:0.3s;">
+        <span class="exp-icon" style="font-family:'Amiri',serif; font-size:1.5rem; color:var(--gold);">أهل</span>
+        <h3 class="exp-title">Family, Not Staff</h3>
+        <p class="exp-text">Our team are not employees — they are the beating heart of Aleppo. They know your name. They remember your order. They are why guests keep coming back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="locations">
+  <div class="geo-pattern" style="opacity:0.03;"></div>
+  <div class="loc-inner">
+    <div class="loc-header reveal">
+      <p class="section-label">Find Us · جدنا</p>
+      <h2 class="section-title">Two homes in Ramallah</h2>
+      <div class="gold-rule"></div>
+      <p class="body-text" style="max-width:480px; margin:0 auto;">Both locations carry the same soul — warm light, familiar faces, and a cup of something good.</p>
+    </div>
+
+    <div class="loc-grid" style="margin-top:3rem;">
+      <div class="loc-card reveal">
+        <div class="loc-num">01</div>
+        <div class="loc-name-ar">شارع ركب</div>
+        <div class="loc-name-en">Rukab Street · Ramallah</div>
+        <p class="body-text" style="font-size:0.9rem;">Our original home — the one where every tile has a memory, and every corner has heard a thousand stories.</p>
+        <div class="loc-detail">
+          <div class="loc-row">
+            <span class="loc-row-label">Address</span>
+            <span class="loc-row-val">Rukab Street, Ramallah, Palestine</span>
+          </div>
+          <div class="loc-row">
+            <span class="loc-row-label">Social</span>
+            <span class="loc-row-val">@aleppo.cafe.palestine</span>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/aleppo.cafe.palestine?igsh=MTJjbTNzbm5sa2I1Yw==" class="loc-map-btn">Instagram Page →</a>
+      </div>
+
+      <div class="loc-card reveal" style="transition-delay:0.2s;">
+        <div class="loc-num">02</div>
+        <div class="loc-name-ar">بيرزيت</div>
+        <div class="loc-name-en">Birzait · Ramallah</div>
+        <p class="body-text" style="font-size:0.9rem;">The second chapter — bringing the same warmth and heritage to the heart of Birzait, welcoming a new family of regulars.</p>
+        <div class="loc-detail">
+          <div class="loc-row">
+            <span class="loc-row-label">Address</span>
+            <span class="loc-row-val">Birzait Universty's eastren gate, Ramallah, Palestine</span>
+          </div>
+          <div class="loc-row">
+            <span class="loc-row-label">Social</span>
+            <span class="loc-row-val">@aleppo.cafe.palestine</span>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/aleppo.cafe.palestine?igsh=MTJjbTNzbm5sa2I1Yw==" class="loc-map-btn">instagram Page →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        حلب
+        <span class="footer-logo-en">Aleppo Cafe · حلب كافيه</span>
+      </div>
+      <p class="footer-tagline">
+        إنت فبيتك وبين عيلتك<br>
+        <em>You are home, among family.</em>
+      </p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/aleppocafepal" title="Facebook">f</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#atmosphere">Atmosphere</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#locations">Locations</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#">Rukab Street, Ramallah</a></li>
+        <li><a href="#">Birzait, Ramallah</a></li>
+        <li><a href="https://www.facebook.com/aleppocafepal">@aleppocafepal</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2009 Aleppo Cafe · حلب كافيه · Ramallah, Palestine</p>
+    <p>Developed by <a href="https://hktechnologie.com/">HK Technologies</a></p>
+    <p style="font-family:'Amiri',serif; font-size:1rem; color:var(--gold);">إنت فبيتك</p>
+  </div>
+</footer>
+
+<script>
+  // NAV scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Menu tabs
+  function showTab(id) {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
