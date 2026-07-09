@@ -14,6 +14,10 @@
     --cream-muted: #8C7550;
     --text: #F0DEB8;
     --text-dim: #C4A97A;
+    /* Hero backgrounds — overridable by the CMS at runtime; the mobile swap
+       below still works because both are CSS variables. */
+    --hero-bg: url('hero-cover.png');
+    --hero-bg-mobile: url('phone_back.png');
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -53,7 +57,7 @@
     letter-spacing: 0.03em;
     text-decoration: none;
   }
-  .nav-logo span { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.3em; display: block; color: var(--cream-dim); text-transform: uppercase; margin-top: -0.2rem; }
+  .nav-logo .nav-logo-en { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.3em; display: block; color: var(--cream-dim); text-transform: uppercase; margin-top: -0.2rem; }
 
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
@@ -90,7 +94,7 @@
 
   .hero-bg {
     position: absolute; inset: 0;
-  background-image: url('hero-cover.png');
+  background-image: var(--hero-bg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -388,6 +392,29 @@
   .menu-panel { display: none; }
   .menu-panel.active { display: block; }
 
+  /* two showcase images at the top of every menu section */
+  .menu-panel-images {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .menu-panel-img {
+    position: relative; width: 100%; min-height: 220px;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    border: 0.5px solid rgba(197,146,42,0.3);
+    filter: sepia(25%) brightness(0.82) saturate(0.85);
+    transition: transform 0.8s ease, filter 0.6s ease;
+  }
+  .menu-panel-img:hover {
+    transform: scale(1.02);
+    filter: sepia(10%) brightness(0.95) saturate(1);
+  }
+  /* optional per-item thumbnail (only shown when an item has an image) */
+  .menu-item-media {
+    width: 100%; height: 140px; margin-bottom: 1rem;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    filter: sepia(20%) brightness(0.85);
+  }
+
   .menu-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1px; background: rgba(197,146,42,0.08);
@@ -666,7 +693,7 @@
     font-size: 0.6rem;
   }
   .hero-bg {
-    background-image: url('phone_back.png');
+    background-image: var(--hero-bg-mobile);
   }
   .gold-rule {
     margin-left: auto;
@@ -714,4 +741,6 @@
     footer { padding-left: 1.5rem; padding-right: 1.5rem; }
     .story-badge { right: 0; }
     .games-strip { padding: 3rem 1.5rem; }
+    .menu-panel-images { grid-template-columns: 1fr; gap: 0.75rem; }
+    .menu-panel-img { min-height: 180px; }
   }

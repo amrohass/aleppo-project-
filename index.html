@@ -15,16 +15,16 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    حلب
-    <span>Aleppo Cafe</span>
+    <span class="nav-logo-ar" data-content="nav.logo_ar">حلب</span>
+    <span class="nav-logo-en" data-content="nav.logo_en">Aleppo Cafe</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#atmosphere">Atmosphere</a></li>
-    <li><a href="#locations">Locations</a></li>
+    <li><a href="#story" data-content="nav.link_story">Our Story</a></li>
+    <li><a href="#menu" data-content="nav.link_menu">Menu</a></li>
+    <li><a href="#atmosphere" data-content="nav.link_atmosphere">Atmosphere</a></li>
+    <li><a href="#locations" data-content="nav.link_locations">Locations</a></li>
   </ul>
-  <a href="#locations" class="nav-reserve">Find Us</a>
+  <a href="#locations" class="nav-reserve" data-content="nav.reserve">Find Us</a>
 </nav>
 
 <!-- HERO -->
@@ -36,21 +36,21 @@
   <div class="hero-ornament"></div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Est. 2016 · Ramallah, Palestine</p>
-    <h1 class="hero-arabic">حلب</h1>
-    <p class="hero-english">Aleppo Cafe</p>
+    <p class="hero-eyebrow" data-content="hero.eyebrow">Est. 2016 · Ramallah, Palestine</p>
+    <h1 class="hero-arabic" data-content="hero.arabic">حلب</h1>
+    <p class="hero-english" data-content="hero.english">Aleppo Cafe</p>
     <div class="hero-divider"></div>
-    <p class="hero-tagline">إنت فبيتك — You are home</p>
+    <p class="hero-tagline" data-content="hero.tagline">إنت فبيتك — You are home</p>
     <div style="margin-top: 3rem;" class="hero-cta">
-      <a href="#menu" class="btn-primary">Explore Menu</a>
-      <a href="#story" class="btn-ghost">Our Story</a>
+      <a href="#menu" class="btn-primary" data-content="hero.cta_menu">Explore Menu</a>
+      <a href="#story" class="btn-ghost" data-content="hero.cta_story">Our Story</a>
     </div>
   </div>
-  
+
 
   <div class="hero-scroll">
     <div class="scroll-line"></div>
-    <span>Scroll</span>
+    <span data-content="hero.scroll">Scroll</span>
   </div>
 </section>
 
@@ -60,49 +60,47 @@
   <div class="story-inner">
     <div class="story-left reveal">
       <div class="story-img-frame">
-        <!-- Placeholder for actual cafe interior image -->
-        <div class="story-img" style="background-image: url('converted_image.jpg'); 
-            background-size: cover; 
-            background-position: center; 
+        <div class="story-img" data-bg="story.img" style="background-image: url('converted_image.jpg');
+            background-size: cover;
+            background-position: center;
             min-height: 400px;
             display: flex;">
-            
         </div>
         <div class="story-badge">
-          <span>10</span>
-          <small>Years of warmth</small>
+          <span data-content="story.badge_num">10</span>
+          <small data-content="story.badge_label">Years of warmth</small>
         </div>
       </div>
     </div>
 
     <div class="story-right reveal" style="transition-delay:0.2s;">
-      <p class="section-label">Our Story · قصتنا</p>
-      <h2 class="section-title">More than a cafe.<br><em>A second home.</em></h2>
+      <p class="section-label" data-content="story.label">Our Story · قصتنا</p>
+      <h2 class="section-title" data-content-html="story.title">More than a cafe.<br><em>A second home.</em></h2>
       <div class="gold-rule"></div>
 
-      <div class="story-quote">إنت فبيتك</div>
-      <p class="story-quote-en">"You are in your home"</p>
+      <div class="story-quote" data-content="story.quote_ar">إنت فبيتك</div>
+      <p class="story-quote-en" data-content="story.quote_en">"You are in your home"</p>
 
-      <p class="body-text">
+      <p class="body-text" data-content="story.body1">
         Nestled inside a century-old building in Ramallah, Aleppo Cafe was born from a simple belief: that a cafe should feel like a warm gathering of family. Since 2016, our guests have not been customers — they are beloved friends who return again and again to our embrace.
       </p>
 
-      <p class="body-text" style="margin-top:1.2rem;">
+      <p class="body-text" style="margin-top:1.2rem;" data-content="story.body2">
         The stone walls remember. The amber light has witnessed laughter, conversations, board games stretching into the night, and mornings that started with Palestinian breakfast and two cups of tea. Our employees are not staff — they are the soul of this home.
       </p>
 
       <div class="stat-row">
         <div class="stat">
-          <div class="stat-num">100+</div>
-          <div class="stat-label">Year old building</div>
+          <div class="stat-num" data-content="story.stat1_num">100+</div>
+          <div class="stat-label" data-content="story.stat1_label">Year old building</div>
         </div>
         <div class="stat">
-          <div class="stat-num">10</div>
-          <div class="stat-label">Years of love</div>
+          <div class="stat-num" data-content="story.stat2_num">10</div>
+          <div class="stat-label" data-content="story.stat2_label">Years of love</div>
         </div>
         <div class="stat">
-          <div class="stat-num">2</div>
-          <div class="stat-label">Ramallah locations</div>
+          <div class="stat-num" data-content="story.stat3_num">2</div>
+          <div class="stat-label" data-content="story.stat3_label">Ramallah locations</div>
         </div>
       </div>
     </div>
@@ -112,40 +110,39 @@
 <!-- ATMOSPHERE -->
 <section class="atmosphere" id="atmosphere">
   <div class="atm-header reveal">
-    <p class="section-label">The Space · المكان</p>
-    <h2 class="section-title">Every corner tells a story</h2>
+    <p class="section-label" data-content="atm.label">The Space · المكان</p>
+    <h2 class="section-title" data-content="atm.title">Every corner tells a story</h2>
     <div class="gold-rule"></div>
-    <p class="body-text">Vintage lamps, mosaic tables, hand-woven cushions, and the faint hum of Arabic music — welcome to Aleppo.</p>
+    <p class="body-text" data-content="atm.body">Vintage lamps, mosaic tables, hand-woven cushions, and the faint hum of Arabic music — welcome to Aleppo.</p>
   </div>
 
   <div class="atm-grid">
     <div class="atm-item">
-      <!-- <div class="atm-img" style="  background-image: url('IMG_0708.jpg'); min-height:500px; display:flex; align-items:flex-end; padding:2rem;">-->
-        <div class="atm-img" style="background-image: url('converted_image_2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
-        <div style="color:rgba(197,146,42,0.6); font-family:'Amiri',serif; font-size:2.5rem; line-height:1.2;">وبين عيلتك</div>
+        <div class="atm-img" data-bg="atm.img1" style="background-image: url('converted_image_2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+        <div data-content="atm.caption" style="color:rgba(197,146,42,0.6); font-family:'Amiri',serif; font-size:2.5rem; line-height:1.2;">وبين عيلتك</div>
       </div>
       <div class="atm-overlay"></div>
     </div>
     <div class="atm-item">
-      <div class="atm-img" style="background-image: url('IMG_0707.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+      <div class="atm-img" data-bg="atm.img2" style="background-image: url('IMG_0707.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
         <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.4);">☕</div>
       </div>
       <div class="atm-overlay"></div>
     </div>
     <div class="atm-item">
-      <div class="atm-img" style="background-image: url('IMG_0705.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+      <div class="atm-img" data-bg="atm.img3" style="background-image: url('IMG_0705.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
         <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.35);">🕯</div>
       </div>
       <div class="atm-overlay"></div>
     </div>
     <div class="atm-item">
-      <div class="atm-img" style="background-image: url('IMG_0704.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+      <div class="atm-img" data-bg="atm.img4" style="background-image: url('IMG_0704.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
         <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.4);">🎲</div>
       </div>
       <div class="atm-overlay"></div>
     </div>
     <div class="atm-item">
-      <div class="atm-img" style="background-image: url('IMG_0708.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
+      <div class="atm-img" data-bg="atm.img5" style="background-image: url('IMG_0708.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height:500px; display:flex; align-items:flex-end; padding:2rem;">
         <div style="font-family:'Amiri',serif; font-size:3rem; color:rgba(197,146,42,0.4);">🫙</div>
       </div>
       <div class="atm-overlay"></div>
@@ -158,255 +155,18 @@
   <div class="geo-pattern" style="opacity:0.025;"></div>
   <div class="menu-inner">
     <div class="menu-header reveal">
-      <p class="section-label">The Menu · قائمة الطعام</p>
-      <h2 class="section-title">From our kitchen, with love</h2>
+      <p class="section-label" data-content="menu.label">The Menu · قائمة الطعام</p>
+      <h2 class="section-title" data-content="menu.title">From our kitchen, with love</h2>
       <div class="gold-rule"></div>
-      <p class="body-text" style="max-width:500px; margin:0 auto;">Prices in NIS. All sandwiches served with fries or salad. Main dishes served with rice.</p>
-    </div>
-    <div class="branch-selector">
-        <button class="branch-btn active" onclick="showBranch('ramallah', this)">
-          Ramallah · رام الله
-        </button>
-        <button class="branch-btn" onclick="showBranch('berzait', this)">
-          Berzait · بيرزيت
-        </button>
-
-    </div>
-    <div class="menu-tabs">
-      <button class="menu-tab active" onclick="showTab('drinks')">Drinks · مشروبات</button>
-      <button class="menu-tab" onclick="showTab('sandwiches')">Sandwiches · ساندويشات</button>
-      <button class="menu-tab" onclick="showTab('appetizers')">Appetizers · المقبلات</button>
-      <button class="menu-tab" onclick="showTab('mains')">Main Course · الأطباق</button>
-      <button class="menu-tab" onclick="showTab('salads')">Salads · سلطات</button>
-      <button class="menu-tab" onclick="showTab('tost')">Tost · توست</button>
-      <button class="menu-tab" onclick="showTab('dessert')">Dessert · حلويات</button>
+      <p class="body-text" style="max-width:500px; margin:0 auto;" data-content="menu.body">Prices in NIS. All sandwiches served with fries or salad. Main dishes served with rice.</p>
     </div>
 
-    <div class="menu-branch active-branch" id="ramallah">
-      <div data-category="drinks" class="menu-panel">
+    <!-- Branch tabs (rendered from data) -->
+    <div class="branch-selector" id="branch-selector"></div>
 
-    <!-- Sub Tabs -->
-     <div class="sub-tabs">
-       <button class="menu-tab active" onclick="showDrinks('hot', this)">Hot · مشروبات ساخنة </button>
-       <button class="menu-tab" onclick="showDrinks('cold', this)">Cold · مشروبات باردة</button>
-       <button class="menu-tab" onclick="showDrinks('juices', this)"> Fresh Juices · عصائر طبيعية</button>
-       <button class="menu-tab" onclick="showDrinks('cocktails', this)">Cocktails · كوكتيلات</button>
-       <button class="menu-tab" onclick="showdrinks('iced',this)">Iced Drinks · مشروبات مثلجة</button>
-       <button class="menu-tab" onclick="showDrinks('shakes', this)">Milk Shakes · ميلك</button>
-       </div>
-  
-         <!-- Hot Drinks -->
-       <div class="sub-content active" data-type="hot">
-         <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Arabic Coffe</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">7 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name"> Espresso</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 / 7 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Americano</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tea</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">6 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Cappuccino</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Latte</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Spanish Latte</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Hot Chocolate</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Italian Chocolete</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Herbs</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Frensh Vanilla</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Matta</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">7 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Niscafe</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">7 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Hazelnut</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Toffee Caramel</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Masla chai</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Honey Tea</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Green Tea</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">10 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chai Latte</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mocha</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">15 ₪</div></div></div>
-
-           
-         </div>
-  
-            <!-- Cold Drinks -->
-          <div class="sub-content" data-type="cold">
-                    <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Bavari</div><div class="menu-item-name-ar">بافاريا</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soda water</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">XL </div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water L</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water S</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-
-          </div>
-          <div class="sub-content" data-type="juices">
-             <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soda water</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">XL </div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water L</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water S</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-
-          </div>
-          <div class="sub-content" data-type="cocktails">
-             <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soda water</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">XL </div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water L</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water S</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-
-          </div>
-          <div class="sub-content" data-type="iced">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">XL </div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water L</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water S</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">XL </div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water L</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water S</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-
-          </div>
-          <div class="sub-content" data-type="shakes">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">XL </div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water L</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water S</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">XL </div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water L</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Water S</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-
-          </div>
-          
-  
+    <!-- Menu branches, tabs, categories, items (rendered from data) -->
+    <div id="menu-branches"></div>
   </div>
-      <div data-category="dessert" class="menu-panel">
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">NewYork cheesecake</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">German cake</div><div class="menu-item-name-ar">جيرمن كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tiramisu</div><div class="menu-item-name-ar">تيراميسو</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Souffle</div><div class="menu-item-name-ar">سوفليه</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Kindly ask the waiter for more.</div><div class="menu-item-name-ar">لطفاً اسأل النادل للمزيد</div></div><div class="menu-item-price"></div></div></div>
-    </div>
-    <div data-category="sandwiches" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Sandwich</div><div class="menu-item-name-ar">مسحب</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mexican Chicken</div><div class="menu-item-name-ar">مسحب مكسيكي</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">White Sauce Chicken</div><div class="menu-item-name-ar">مسحب وايت صوص</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Italian Chicken Sandwich</div><div class="menu-item-name-ar">مسحب إيطالي</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Zinger</div><div class="menu-item-name-ar">زنجر دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Classic Burger</div><div class="menu-item-name-ar">برجر كلاسيك</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mushroom Burger</div><div class="menu-item-name-ar">برجر مع مشروم</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Shawarma</div><div class="menu-item-name-ar">شاورما دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
-      </div>
-    </div>
-     <div  data-category="tost" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mix tost</div><div class="menu-item-name-ar">توست مشكل</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Cheese tost</div><div class="menu-item-name-ar">توست جبنة صفراء</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Sausage tost</div><div class="menu-item-name-ar">توست نقانق</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">White Cheese tost</div><div class="menu-item-name-ar">توست جبنة بيضاء</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tuna tost</div><div class="menu-item-name-ar">توست تونا</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Roast beef tost</div><div class="menu-item-name-ar">توست روست بيف</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Smoked turkey tost</div><div class="menu-item-name-ar">توست حبش</div></div><div class="menu-item-price">35 ₪</div></div></div>
-      </div>
-    </div>
-      <div data-category="appetizers" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Garlic Bread</div><div class="menu-item-name-ar">خبز بالثوم</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Meat Rolls (8 pcs)</div><div class="menu-item-name-ar">أصابع لحمة · 8 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Fingers (6 pcs)</div><div class="menu-item-name-ar">أصابع دجاج · 6 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Potato Rolls (8 pcs)</div><div class="menu-item-name-ar">أصابع بطاطا · 8 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">French Fries</div><div class="menu-item-name-ar">بطاطا مقلية</div></div><div class="menu-item-price">12 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Nachos</div><div class="menu-item-name-ar">ناتشوز</div></div><div class="menu-item-price">25 ₪</div></div></div>
-      </div>
-    </div>
-      <div data-category="mains" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fajita</div><div class="menu-item-name-ar">فاهيتا</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Steak with Sautéed Vegetables</div><div class="menu-item-name-ar">ستيك دجاج مع خضار</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fettuccine</div><div class="menu-item-name-ar">فيتوتشيني / دجاج</div></div><div class="menu-item-price">30–35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Stroganoff</div><div class="menu-item-name-ar">ستروجانوف</div></div><div class="menu-item-price">35 ₪</div></div></div>
-      </div>
-    </div>
-    <div data-category="salads" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Caesar Salad</div><div class="menu-item-name-ar">سيزر</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fattoush</div><div class="menu-item-name-ar">فتوش</div></div><div class="menu-item-price">17 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tabbouleh</div><div class="menu-item-name-ar">تبولة</div></div><div class="menu-item-price">17 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Salad</div><div class="menu-item-name-ar">سلطة دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Greek Salad</div><div class="menu-item-name-ar">سلطة يونانية</div></div><div class="menu-item-price">20 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tuna Salad</div><div class="menu-item-name-ar">سلطة تونا</div></div><div class="menu-item-price">20 ₪</div></div></div>
-      </div>
-    </div>
-  </div>
-    </div>
-    <div class="menu-branch" id="berzait">
-      
-      
-      <div data-category="dessert" class="menu-panel">
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">NewYork cheesecake</div><div class="menu-item-name-ar">نيويورك تشيز كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">German cake</div><div class="menu-item-name-ar">جيرمن كيك</div></div><div class="menu-item-price">30 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tiramisu</div><div class="menu-item-name-ar">تيراميسو</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Souffle</div><div class="menu-item-name-ar">سوفليه</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Kindly ask the waiter for more.</div><div class="menu-item-name-ar">لطفاً اسأل النادل للمزيد</div></div><div class="menu-item-price"></div></div></div>
-    </div>
-    <div data-category="sandwiches" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Sandwich</div><div class="menu-item-name-ar">مسحب</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mexican Chicken</div><div class="menu-item-name-ar">مسحب مكسيكي</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">White Sauce Chicken</div><div class="menu-item-name-ar">مسحب وايت صوص</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Italian Chicken Sandwich</div><div class="menu-item-name-ar">مسحب إيطالي</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Zinger</div><div class="menu-item-name-ar">زنجر دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Classic Burger</div><div class="menu-item-name-ar">برجر كلاسيك</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mushroom Burger</div><div class="menu-item-name-ar">برجر مع مشروم</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Shawarma</div><div class="menu-item-name-ar">شاورما دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
-      </div>
-    </div>
-     <div data-category="tost" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Mix tost</div><div class="menu-item-name-ar">توست مشكل</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Cheese tost</div><div class="menu-item-name-ar">توست جبنة صفراء</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Sausage tost</div><div class="menu-item-name-ar">توست نقانق</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">White Cheese tost</div><div class="menu-item-name-ar">توست جبنة بيضاء</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tuna tost</div><div class="menu-item-name-ar">توست تونا</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Roast beef tost</div><div class="menu-item-name-ar">توست روست بيف</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Smoked turkey tost</div><div class="menu-item-name-ar">توست حبش</div></div><div class="menu-item-price">35 ₪</div></div></div>
-      </div>
-    </div>
-      <div data-category="appetizers" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Garlic Bread</div><div class="menu-item-name-ar">خبز بالثوم</div></div><div class="menu-item-price">15 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Meat Rolls (8 pcs)</div><div class="menu-item-name-ar">أصابع لحمة · 8 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Fingers (6 pcs)</div><div class="menu-item-name-ar">أصابع دجاج · 6 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Potato Rolls (8 pcs)</div><div class="menu-item-name-ar">أصابع بطاطا · 8 قطع</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">French Fries</div><div class="menu-item-name-ar">بطاطا مقلية</div></div><div class="menu-item-price">12 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Nachos</div><div class="menu-item-name-ar">ناتشوز</div></div><div class="menu-item-price">25 ₪</div></div></div>
-      </div>
-    </div>
-      <div data-category="mains" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fajita</div><div class="menu-item-name-ar">فاهيتا</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Steak with Sautéed Vegetables</div><div class="menu-item-name-ar">ستيك دجاج مع خضار</div></div><div class="menu-item-price">35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fettuccine</div><div class="menu-item-name-ar">فيتوتشيني / دجاج</div></div><div class="menu-item-price">30–35 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Stroganoff</div><div class="menu-item-name-ar">ستروجانوف</div></div><div class="menu-item-price">35 ₪</div></div></div>
-      </div>
-    </div>
-    <div data-category="salads" class="menu-panel">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Caesar Salad</div><div class="menu-item-name-ar">سيزر</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Fattoush</div><div class="menu-item-name-ar">فتوش</div></div><div class="menu-item-price">17 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tabbouleh</div><div class="menu-item-name-ar">تبولة</div></div><div class="menu-item-price">17 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Chicken Salad</div><div class="menu-item-name-ar">سلطة دجاج</div></div><div class="menu-item-price">25 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Greek Salad</div><div class="menu-item-name-ar">سلطة يونانية</div></div><div class="menu-item-price">20 ₪</div></div></div>
-        <div class="menu-item"><div class="menu-item-header"><div><div class="menu-item-name">Tuna Salad</div><div class="menu-item-name-ar">سلطة تونا</div></div><div class="menu-item-price">20 ₪</div></div></div>
-      </div>
-    </div>
-  </div>
-    </div>
-
-  
 </section>
 
 <!-- HOOKAH -->
@@ -440,61 +200,45 @@
     </div>
 
     <div class="hookah-right reveal" style="transition-delay:0.2s;">
-      <p class="section-label">The Chimney Hookah · مدخنة أراجيل</p>
-      <h2 class="section-title">Settle in. <em>Stay a while.</em></h2>
+      <p class="section-label" data-content="hookah.label">The Chimney Hookah · مدخنة أراجيل</p>
+      <h2 class="section-title" data-content-html="hookah.title">Settle in. <em>Stay a while.</em></h2>
       <div class="gold-rule"></div>
-      <p class="body-text" style="margin-bottom:2rem;">Our handcrafted hookah flavors are as warm as the conversations they accompany.</p>
-      <div class="hookah-flavors">
-        <div class="flavor-chip"><span class="flavor-name">Two Apples</span><span class="flavor-price">15 ₪</span></div>
-        <div class="flavor-chip"><span class="flavor-name">Lemon & Mint</span><span class="flavor-price">15 ₪</span></div>
-        <div class="flavor-chip"><span class="flavor-name">Watermelon & Mint</span><span class="flavor-price">15 ₪</span></div>
-        <div class="flavor-chip"><span class="flavor-name">Melon Mint</span><span class="flavor-price">15 ₪</span></div>
-        <div class="flavor-chip"><span class="flavor-name">Gum & Cinnamon</span><span class="flavor-price">15 ₪</span></div>
-        <div class="flavor-chip"><span class="flavor-name">Blueberry</span><span class="flavor-price">15 ₪</span></div>
-        <div class="flavor-chip"><span class="flavor-name">Adalya Love 66</span><span class="flavor-price">15 ₪</span></div>
-        <div class="flavor-chip"><span class="flavor-name">Nakhla Tobacco</span><span class="flavor-price">20 ₪</span></div>
-      </div>
+      <p class="body-text" style="margin-bottom:2rem;" data-content="hookah.body">Our handcrafted hookah flavors are as warm as the conversations they accompany.</p>
+      <div class="hookah-flavors" id="hookah-flavors"></div>
     </div>
   </div>
 </section>
 
 <!-- GAMES STRIP -->
 <div class="games-strip">
-  <p class="games-strip-text">يلا نلعب؟</p>
-  <p class="games-strip-sub">Let's Play · Board Games Available</p>
-  <ul class="games-list">
-    <li>Monopoly</li>
-    <li>Scrabble</li>
-    <li>Risk</li>
-    <li>Chess</li>
-    <li>Uno</li>
-    <li>& More</li>
-  </ul>
+  <p class="games-strip-text" data-content="games.title">يلا نلعب؟</p>
+  <p class="games-strip-sub" data-content="games.sub">Let's Play · Board Games Available</p>
+  <ul class="games-list" id="games-list"></ul>
 </div>
 
 <!-- EXPERIENCE -->
 <section class="experience">
   <div class="exp-inner">
     <div class="reveal" style="text-align:center;">
-      <p class="section-label">Why Aleppo · لماذا حلب</p>
-      <h2 class="section-title">Three things that make us <em>different</em></h2>
+      <p class="section-label" data-content="exp.label">Why Aleppo · لماذا حلب</p>
+      <h2 class="section-title" data-content-html="exp.title">Three things that make us <em>different</em></h2>
       <div class="gold-rule" style="margin: 1.5rem auto;"></div>
     </div>
     <div class="exp-grid">
       <div class="exp-card reveal">
         <span class="exp-icon" style="font-family:'Amiri',serif; font-size:1.5rem; color:var(--gold);">١٠٠</span>
-        <h3 class="exp-title">A Century of Walls</h3>
-        <p class="exp-text">Our building has stood for over 100 years. The stone absorbs stories. You feel it the moment you walk in — a warmth that no new construction can replicate.</p>
+        <h3 class="exp-title" data-content="exp.card1_title">A Century of Walls</h3>
+        <p class="exp-text" data-content="exp.card1_text">Our building has stood for over 100 years. The stone absorbs stories. You feel it the moment you walk in — a warmth that no new construction can replicate.</p>
       </div>
       <div class="exp-card reveal" style="transition-delay:0.15s;">
         <span class="exp-icon" style="color:var(--gold); font-size:1.5rem;">♟</span>
-        <h3 class="exp-title">Games, Always</h3>
-        <p class="exp-text">Monopoly, chess, UNO, Scrabble — because the best conversations start around a board game. Time slows down here. That is the point.</p>
+        <h3 class="exp-title" data-content="exp.card2_title">Games, Always</h3>
+        <p class="exp-text" data-content="exp.card2_text">Monopoly, chess, UNO, Scrabble — because the best conversations start around a board game. Time slows down here. That is the point.</p>
       </div>
       <div class="exp-card reveal" style="transition-delay:0.3s;">
         <span class="exp-icon" style="font-family:'Amiri',serif; font-size:1.5rem; color:var(--gold);">أهل</span>
-        <h3 class="exp-title">Family, Not Staff</h3>
-        <p class="exp-text">Our team are not employees — they are the beating heart of Aleppo. They know your name. They remember your order. They are why guests keep coming back.</p>
+        <h3 class="exp-title" data-content="exp.card3_title">Family, Not Staff</h3>
+        <p class="exp-text" data-content="exp.card3_text">Our team are not employees — they are the beating heart of Aleppo. They know your name. They remember your order. They are why guests keep coming back.</p>
       </div>
     </div>
   </div>
@@ -505,49 +249,14 @@
   <div class="geo-pattern" style="opacity:0.03;"></div>
   <div class="loc-inner">
     <div class="loc-header reveal">
-      <p class="section-label">Find Us · جدنا</p>
-      <h2 class="section-title">Two homes in Ramallah</h2>
+      <p class="section-label" data-content="loc.label">Find Us · جدنا</p>
+      <h2 class="section-title" data-content="loc.title">Two homes in Ramallah</h2>
       <div class="gold-rule"></div>
-      <p class="body-text" style="max-width:480px; margin:0 auto;">Both locations carry the same soul — warm light, familiar faces, and a cup of something good.</p>
+      <p class="body-text" style="max-width:480px; margin:0 auto;" data-content="loc.body">Both locations carry the same soul — warm light, familiar faces, and a cup of something good.</p>
     </div>
 
-    <div class="loc-grid" style="margin-top:3rem;">
-      <div class="loc-card reveal">
-        <div class="loc-num">01</div>
-        <div class="loc-name-ar">شارع ركب</div>
-        <div class="loc-name-en">Rukab Street · Ramallah</div>
-        <p class="body-text" style="font-size:0.9rem;">Our original home — the one where every tile has a memory, and every corner has heard a thousand stories.</p>
-        <div class="loc-detail">
-          <div class="loc-row">
-            <span class="loc-row-label">Address</span>
-            <span class="loc-row-val">Rukab Street, Ramallah, Palestine</span>
-          </div>
-          <div class="loc-row">
-            <span class="loc-row-label">Social</span>
-            <span class="loc-row-val">@aleppo.cafe.palestine</span>
-          </div>
-        </div>
-        <a href="https://www.instagram.com/aleppo.cafe.palestine?igsh=MTJjbTNzbm5sa2I1Yw==" class="loc-map-btn">Instagram Page →</a>
-      </div>
-
-      <div class="loc-card reveal" style="transition-delay:0.2s;">
-        <div class="loc-num">02</div>
-        <div class="loc-name-ar">بيرزيت</div>
-        <div class="loc-name-en">Birzait · Ramallah</div>
-        <p class="body-text" style="font-size:0.9rem;">The second chapter — bringing the same warmth and heritage to the heart of Birzait, welcoming a new family of regulars.</p>
-        <div class="loc-detail">
-          <div class="loc-row">
-            <span class="loc-row-label">Address</span>
-            <span class="loc-row-val">Birzait Universty's eastren gate, Ramallah, Palestine</span>
-          </div>
-          <div class="loc-row">
-            <span class="loc-row-label">Social</span>
-            <span class="loc-row-val">@aleppo.cafe.palestine</span>
-          </div>
-        </div>
-        <a href="https://www.instagram.com/aleppo.cafe.palestine?igsh=MTJjbTNzbm5sa2I1Yw==" class="loc-map-btn">instagram Page →</a>
-      </div>
-    </div>
+    <!-- Location cards (rendered from data) -->
+    <div class="loc-grid" id="loc-grid" style="margin-top:3rem;"></div>
   </div>
 </section>
 
@@ -556,118 +265,44 @@
   <div class="footer-inner">
     <div>
       <div class="footer-logo">
-        حلب
-        <span class="footer-logo-en">Aleppo Cafe · حلب كافيه</span>
+        <span data-content="footer.logo_ar">حلب</span>
+        <span class="footer-logo-en" data-content="footer.logo_en">Aleppo Cafe · حلب كافيه</span>
       </div>
       <p class="footer-tagline">
-        إنت فبيتك وبين عيلتك<br>
-        <em>You are home, among family.</em>
+        <span data-content="footer.tagline_ar">إنت فبيتك وبين عيلتك</span><br>
+        <em data-content="footer.tagline_en">You are home, among family.</em>
       </p>
-      <div class="footer-social">
-        <a href="https://www.facebook.com/aleppocafepal" title="Facebook">f</a>
-      </div>
+      <div class="footer-social" id="footer-social"></div>
     </div>
 
     <div class="footer-col">
-      <h4>Explore</h4>
+      <h4 data-content="footer.explore_heading">Explore</h4>
       <ul>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#atmosphere">Atmosphere</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#locations">Locations</a></li>
+        <li><a href="#story" data-content="footer.explore_story">Our Story</a></li>
+        <li><a href="#atmosphere" data-content="footer.explore_atmosphere">Atmosphere</a></li>
+        <li><a href="#menu" data-content="footer.explore_menu">Menu</a></li>
+        <li><a href="#locations" data-content="footer.explore_locations">Locations</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Visit</h4>
-      <ul>
-        <li><a href="#">Rukab Street, Ramallah</a></li>
-        <li><a href="#">Birzait, Ramallah</a></li>
-        <li><a href="https://www.facebook.com/aleppocafepal">@aleppocafepal</a></li>
-      </ul>
+      <h4 data-content="footer.visit_heading">Visit</h4>
+      <ul id="footer-visit"></ul>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>© 2009 Aleppo Cafe · حلب كافيه · Ramallah, Palestine</p>
-    <p>Developed by <a href="https://hktechnologie.com/">HK Technologies</a></p>
-    <p style="font-family:'Amiri',serif; font-size:1rem; color:var(--gold);">إنت فبيتك</p>
+    <p data-content="footer.copyright">© 2016 Aleppo Cafe · حلب كافيه · Ramallah, Palestine</p>
+    <p data-content-html="footer.credit">Developed by <a href="https://hktechnologie.com/">HK Technologies</a></p>
+    <p style="font-family:'Amiri',serif; font-size:1rem; color:var(--gold);" data-content="footer.seal">إنت فبيتك</p>
   </div>
 </footer>
 
-<script>
-  // NAV scroll effect
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-  function showDrinks(type, btn) {
-  const panel = btn.closest('.menu-panel');
-
-  // hide all
-  panel.querySelectorAll('.sub-content').forEach(el => {
-    el.classList.remove('active');
-  });
-
-  // show selected
-  panel.querySelector(`[data-type="${type}"]`).classList.add('active');
-
-  // update buttons
-  panel.querySelectorAll('.sub-tab').forEach(b => {
-    b.classList.remove('active');
-  });
-
-  btn.classList.add('active');
-}
-function showBranch(branchId, btn) {
-  // switch branch
-  document.querySelectorAll('.menu-branch').forEach(el => {
-    el.classList.remove('active-branch');
-  });
-
-  document.getElementById(branchId).classList.add('active-branch');
-
-  // button active state
-  document.querySelectorAll('.branch-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-
-  // reset to first tab (breakfast)
-  showTab('breakfast');
-
-  // scroll
-  document.querySelector('#menu').scrollIntoView({
-    behavior: 'smooth'
-  });
-}
-  // Menu tabs
- function showTab(category) {
-  // get active branch only
-  const activeBranch = document.querySelector('.menu-branch.active-branch');
-
-  // hide all panels inside active branch
-  activeBranch.querySelectorAll('.menu-panel').forEach(panel => {
-    panel.classList.remove('active');
-  });
-
-  // show selected category
-  activeBranch.querySelector(`[data-category="${category}"]`).classList.add('active');
-
-  // update tab buttons
-  document.querySelectorAll('.menu-tab').forEach(btn => {
-    btn.classList.remove('active');
-  });
-
-  event.target.classList.add('active');
-}
-</script>
+<!-- Supabase client (public read; admin writes via admin.html) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/default-data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/site.js"></script>
 </body>
-</html> 
+</html>
